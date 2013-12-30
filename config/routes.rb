@@ -1,3 +1,3 @@
 TinystoreApi::Application.routes.draw do
-  resources 'stores', only: [:index], path: "tinystores"
+  resources 'stores', only: [:index, :show]
 end

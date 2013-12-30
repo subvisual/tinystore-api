@@ -13,5 +13,5 @@ end
 
 require 'tinystore'
 Tinystore.configure do |config|
-    config.repository = :active_record
+  config.repository = :active_record
 end
