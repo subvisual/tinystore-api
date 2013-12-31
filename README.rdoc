@@ -7,3 +7,13 @@ To run:
   bundle install
   bundle exec rake db:migrate
   bundle exec rails server
+
+You might want to add some entries to the DB, to do so open the rails console and type(to create a store):
+
+  repo = Repository.for(:store)
+  store = Store.new name: "XPTO", description: "Very nice store"
+  repo.save store
+
+If you need to access the ActiveRecord class directly, without going through the repo (not advised), you can:
+
+  Repositories::Stores::ActiveRecord::Store.find(1).update_attributes name: "Foo"
